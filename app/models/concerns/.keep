@@ -1,0 +1,8 @@
+<% if current_user %>
+<li><%= link_to "sign_out", destroy_user_session_path(), :method => :delete %></li>
+<% else %>
+<li><%= link_to "sign_in", new_user_session_path() %></li>
+<% end %>
+<li><%= link_to "password",  new_user_password_path() %></li>
+<li><%= link_to "cancel", cancel_user_registration_path() %></li>
+<% end %>
